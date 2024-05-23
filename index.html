@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Piet de Leeuw</title>
+        
+        <!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="./images/favicon/site.webmanifest">
+		<!-- END FAVICON -->
+
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    </head>
+    <body>
+        <!--| NAVBAR |-->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <!-- END NAVBAR -->
+
+        <!--| HOME |-->
+        <!-- BACKGROUND VIDEO -->
+        <div id="home">
+            <video autoplay muted loop id="typing_video">
+                <source src="./videos/typing.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- VIDEO TEXT -->
+        <div class="video_text">
+            <h1 class="white_text">Portfolio: Piet de Leeuw</h1>
+            <strong>
+                <p class="center">
+                    <q>Any Fool can write code that a computer can understand.
+                        <br>Good programmers write code humans can understand.
+                    </q>
+                    <br>- Martin Fowler
+                    <br>
+                    <br>
+                    <q>I'm not a great programmer. I'm just a good programmer with great habits.</q>
+                    <br>- Kent Beck 
+                    <br>
+                    <br> My name is Piet de Leeuw. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                    <br>Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+        <!--| END HOME |-->
+
+        <!--| ABOUT |-->
+        <div class="row" id="about">
+            <div class="column_1">
+                <img src="./images/laptop_1.jpg" alt="picture of a laptop">
+            </div>
+            <div class="column_2">
+                <h1>About</h1>
+                <p>
+                    I am a student of <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>'s Software and Game Developer Boot Camp. 
+                    At the and of the boot camp I will have learned the following web and programming languages: 
+                    C#, C++, HTML, CSS, JavaScript and SQL. I also will now how to work with Unity and Unreal Engine.  
+                    <br>
+                    <br>Im a Junior full-stack Developer and would love to work on your projects. <a href="#contact">Contact</a> me bellow!   
+                </p>
+            </div>
+        </div>
+        <!--| END ABOUT |-->
+
+        <!--| GITHUB |-->
+        <div class="row" id="github">
+            <div class="column_2">
+                <h1>GITHUB</h1>
+                <p>You can view my coding projects on my GitHub profile here:</p>
+                <p class="center"><a href="https://github.com/piet-de-leeuw" target="_blank">GitHub: Piet de Leeuw</a></p>
+            </div>
+            <div class="column_1">
+                <a href="https://github.com/piet-de-leeuw" target="_blank"><img src="./images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+        <!--| END GITHUB |-->
+
+        <!--| CONTACT |-->
+        <div class="row" id="contact">
+            <div class="column_1 column_tall">
+                <img src="./images/mail.jpg" alt="Picture of envelopes">
+            </div>
+            <div class="column_2 column_tall">
+                <h1>CONTACT</h1>
+                <form action="https://formspree.io/f/xkndepze" method="post">
+                    <label>Name:</label>
+                        <input type="text" name="Name:" placeholder="Please enter your name here:">
+                    <label>E-mail:</label>
+                        <input type="text" id="email" name="Email" placeholder="Please enter your name here:">
+                    <label>Message:</label>
+                        <input type="text" id="message" name="Message" placeholder="Please enter your name here:">
+                        <input type="submit" value="SUBMIT">
+                    </form>
+            </div>
+        </div>
+        <!--| END CONTACT |-->
+
+        <!--| FOOTER |-->
+        <div class="footer">
+            <p class="center">pietdeleeuw156@gmail.com</p>
+        </div>
+        <!--| END FOOTER |-->
+    </body>
+</html>

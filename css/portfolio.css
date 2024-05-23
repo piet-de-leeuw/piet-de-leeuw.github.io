@@ -1,0 +1,300 @@
+/***** GENERAL STYLING *****/
+
+body
+{
+    margin: 0%; /* Ensures the site to be displayed al the way up to the edge */
+}
+
+* /*effects all elemments*/
+{
+    box-sizing: border-box; /*prevents overflow by padding and border*/
+}
+
+h1
+{
+    text-transform: uppercase;
+    font-family: "trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 1%;
+    color: #1a1a1a;
+}
+
+h1:hover
+{
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+p
+{
+    font-family: Perpetua, Rockwell Exstra Bold;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p:hover
+{
+    transform: scale(1.01);
+    transition: transform 1s;
+}
+
+q
+{
+    font-style: italic;
+}
+
+/*Centers the Video_text, GitHub link and Footer text*/
+.center
+{
+    text-align: center;
+}
+
+.center:hover
+{
+    transform: scale(1.1);
+    transition: transform 2s;
+}
+
+img
+{
+    filter: grayscale(65%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover
+{
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px)
+{
+    img
+    {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/***** NAVBAR *****/
+/*Styles the Navigations bar*/
+.navbar
+{
+    overflow: hidden; /*hiddes content that overflowes beyoned its containers borders*/
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNavFromLeft 5s;
+    animation: moveNavFromLeft 5s;
+}
+
+/*Moves the Navbar from left into the screen when the page is loaded*/
+@keyframes moveNavFromLeft
+{
+    from{left: -100vw;}
+    to{left:  0vw;}
+}
+
+/*Styles the navigation buttons*/
+.navbar a
+{
+    float: left; /*taxt floates on left of the navbar*/
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-family: Avant Garde, Helvetica;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*the navigation buttons each take up 1/4 of the screen on a small screen*/
+@media screen and (max-width: 576px)
+{
+    .navbar a
+    {
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+.navbar a:hover
+{
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar a.active
+{
+    background-color: darkgray;
+}
+
+/***** HOME *****/
+/*Video Background*/
+#typing_video
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-200px); /*moves transform of the typing_video 200px up so we can see the part of the video that we want.*/
+    z-index: -1;
+}
+
+/*No Video on small screen*/
+@media screen and (max-width: 576px)
+{
+    #typing_video
+    {
+        display: none;
+    }
+}
+
+/*Styling of the portfolio head in video_text*/
+.white_text 
+{
+    color: #fff;
+    margin-top: 4%;
+}
+
+/*Text overlay over the background video*/
+.video_text
+{
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding: 20px 0px;
+    position: relative;
+    -webkit-animation: moveVideoText 5s;
+    animation: moveVideoText 5s;
+}
+
+/*Moves video_text from top into the screen*/
+@keyframes moveVideoText
+{
+    from{top: -100vw;}
+    to{top: 0vw;}
+}
+
+/***** STRUCTURE FOR ABOUT GITHUB AND CONTACT SECTIONS *****/
+/*Styles the columned section*/
+.column_1
+{
+    float: left;
+    width: 50%;
+    height: 400px;
+    padding: 1.9%;
+    background-color: #4d4d4d;
+}
+
+@media screen and (max-width: 576px)
+{
+    .column_1
+    {
+        overflow: auto;
+    }
+}
+
+.column_2
+{
+    float: left;
+    width: 50%;
+    height: 400px;
+    padding: 10px;
+    padding-top: 3%;
+    background-color: #f2f2f2;
+}
+
+.column_tall
+{
+    height: 450px;
+    padding-top: 3.5%;
+}
+
+/*Pushes the footer under the columns*/
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/***** CONTACT *****/
+
+input[type=text]
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=text]:hover
+{
+    box-shadow: 0, 0, 5px #00004d inset;
+}
+
+input[type=submit]
+{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=Submit]:hover
+{
+    background-color: white;
+    color: black;
+    transition: transform 1.5s;
+    transform: scale(1.5);
+}
+
+form
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 12px;
+    font-family: 'Trebuchet MS', Optima;
+}
+
+/***** FOOTER *****/
+
+.footer
+{
+    background: white;
+}
+
+.footer p
+{
+    margin: 0px 0px;
+    padding: 20px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', Optima;
+}
