@@ -14,15 +14,15 @@
 
         <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
     </head>
-    <body>
+    <body class="background">
         <!--| NAVBAR |-->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a onclick="OpenCloseForm()" class="contact">Contact</a>
         </div>
-        <!-- END NAVBAR -->
 
         <!--| HOME |-->
         <!-- BACKGROUND VIDEO -->
@@ -34,8 +34,8 @@
         </div>
 
         <!-- VIDEO TEXT -->
-        <div class="video_text">
-            <h1 class="white_text">Portfolio: Piet de Leeuw</h1>
+        <div class="video-text">
+            <h1 class="white-text">Portfolio: Piet de Leeuw</h1>
             <strong>
                 <p class="center">
                     <q>Any Fool can write code that a computer can understand.
@@ -53,13 +53,66 @@
                 </p>
             </strong>
         </div>
-        <!--| END HOME |-->
+
+        <!--| SLIDESHOW |-->
+        <div id="slideshow">
+            <div id="slideshow-background">
+                <div id="slideshow-container">
+                    <!-- slide 1 -->
+                    <div class="my-slide fade">
+                        <img class="slideshow-img portrait" src="./images/slides/portrait.jpg" alt="picture of piet">
+                        <div class="text">I would like to meet you!</div>
+                    </div>
+                    <!-- slide 2 -->
+                    <div class="my-slide fade">
+                        <img class="slideshow-img" src="./images/slides/HTML_CSS_and_JavaScript.jpeg" alt="picture of piet">
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- slide 3 -->
+                    <div class="my-slide fade">
+                        <img class="slideshow-img" src="./images/slides/Python.png" alt="picture of piet">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- lide 4 -->
+                    <div class="my-slide fade">
+                        <img class="slideshow-img" src="./images/slides/C_Sharp_and_Dot_NET.png" alt="picture of piet">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                    </div>
+                    <!-- slide 5 -->
+                    <div class="my-slide fade">
+                        <img class="slideshow-img" src="./images/slides/SQL_and_Database.jpg" alt="picture of piet">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- slide 6 -->
+                    <div class="my-slide fade">
+                        <img class="slideshow-img" src="./images/slides/mail.jpg" alt="picture of piet">
+                        <div class="text"><a class=" contact link" onclick="OpenCloseForm()">Contact me now!</a></div>
+                    </div>
+                    <!-- previous and next button-->
+                     <a class="previous" onclick="PlusSlide(-1)">&#10094;</a>
+                     <a class="next" onclick="PlusSlide(1)">&#10095;</a>
+                </div>
+                <br> <!-- space between slides and dots -->
+
+                <!-- dots for slideshow navigation -->
+                <div class="center">
+                    <span class="dot" onclick="CurrentSlide(1)"></span>
+                    <span class="dot" onclick="CurrentSlide(2)"></span>
+                    <span class="dot" onclick="CurrentSlide(3)"></span>
+                    <span class="dot" onclick="CurrentSlide(4)"></span>
+                    <span class="dot" onclick="CurrentSlide(5)"></span>
+                    <span class="dot" onclick="CurrentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
 
         <!--| ABOUT |-->
         <div class="row" id="about">
+            <!-- left colomn -->
             <div class="column_1">
                 <img src="./images/laptop_1.jpg" alt="picture of a laptop">
             </div>
+            <!-- right colomn -->
             <div class="column_2">
                 <h1>About</h1>
                 <p>
@@ -67,49 +120,50 @@
                     At the and of the boot camp I will have learned the following web and programming languages: 
                     C#, C++, HTML, CSS, JavaScript and SQL. I also will now how to work with Unity and Unreal Engine.  
                     <br>
-                    <br>Im a Junior full-stack Developer and would love to work on your projects. <a href="#contact">Contact</a> me bellow!   
+                    <br>Im a Junior full-stack Developer and would love to work on your projects. <a onclick="OpenCloseForm()" class="contact link">Contact me!</a> 
                 </p>
             </div>
         </div>
-        <!--| END ABOUT |-->
 
         <!--| GITHUB |-->
         <div class="row" id="github">
+            <!-- left colomn -->
             <div class="column_2">
                 <h1>GITHUB</h1>
                 <p>You can view my coding projects on my GitHub profile here:</p>
                 <p class="center"><a href="https://github.com/piet-de-leeuw" target="_blank">GitHub: Piet de Leeuw</a></p>
             </div>
+            <!-- right colomn -->
             <div class="column_1">
                 <a href="https://github.com/piet-de-leeuw" target="_blank"><img src="./images/GitHub.png" alt="GitHub Logo"></a>
             </div>
         </div>
-        <!--| END GITHUB |-->
 
         <!--| CONTACT |-->
-        <div class="row" id="contact">
-            <div class="column_1 column_tall">
-                <img src="./images/mail.jpg" alt="Picture of envelopes">
-            </div>
-            <div class="column_2 column_tall">
-                <h1>CONTACT</h1>
-                <form action="https://formspree.io/f/xkndepze" method="post">
-                    <label>Name:</label>
-                        <input type="text" name="Name:" placeholder="Please enter your name here:">
-                    <label>E-mail:</label>
-                        <input type="text" id="email" name="Email" placeholder="Please enter your name here:">
-                    <label>Message:</label>
-                        <input type="text" id="message" name="Message" placeholder="Please enter your name here:">
-                        <input type="submit" value="SUBMIT">
-                    </form>
+        <div id="contact">
+            <button class="pop-up-button" onclick="OpenCloseForm()">CONTACT</button>
+            <div class="form-popup" id="myform">
+                <form class="form-container" action="https://formspree.io/f/xkndepze" method="post">
+                    <h1>CONTACT</h1>
+                    <label for="name"><b>Name:*</b></label>
+                        <input type="text" name="name" placeholder="Please enter your name here" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="text" name="phone" placeholder="Please enter your name here">
+                    <label for="e-mail"><b>E-mail:*</b></label>
+                        <input type="text" name="e-mail" placeholder="Please enter your e-mail address here" required>
+                    <label for="message"><b>Message:*</b></label>
+                        <input type="text" name="message" placeholder="Please enter your message here" required>
+                    
+                    <button type="submit" class="btn submit">SUBMIT</button>
+                    <button type="button" class="btn cancel">CLOSE</button>
+                </form>
             </div>
         </div>
-        <!--| END CONTACT |-->
 
         <!--| FOOTER |-->
         <div class="footer">
-            <p class="center">pietdeleeuw156@gmail.com</p>
+            <p class="center">pietdeleeuw156@gmail.com &nbsp; || &nbsp; LinkedIn: &nbsp;<a href="www.linkedin.com/in/piet-de-leeuw-586735305">Piet de Leeuw</a></p>
         </div>
-        <!--| END FOOTER |-->
+        <script src="./js/portfolio.js"></script>
     </body>
 </html>
