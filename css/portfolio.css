@@ -22,7 +22,7 @@ body
     user-select: none;
 }
 
-/* This makes a fadein effect when the page is loded */
+/* This makes a fade-in effect when the page is loded */
 body.fade-out
 {
     opacity: .1;
@@ -33,7 +33,6 @@ h1
     text-transform: uppercase;
     font-family: "trebuchet MS", Optima;
     text-align: center;
-    margin-top: 3%;
     color: #1a1a1a;
 }
 
@@ -335,7 +334,6 @@ img:hover
     width: 50%;
     height: 400px;
     padding: 10px;
-    padding-top: 3%;
     background-color: #f2f2f2;
 }
 
