@@ -4,9 +4,9 @@ In this repsitory you find all the code I wrote for my portfolio Website.
 Please dont't forget to take a look at the website itself if you havend't already, and learn about my other skills!
 
 ### View the code:
-[HTML](index.html)
-[CSS](css/portfolio.css)
-[JavaScript](js/portfolio.js)
+- [HTML](index.html)
+- [CSS](css/portfolio.css)
+- [JavaScript](js/portfolio.js)
 
 ### View my portfolio:
 [Piet de Leeuw Portfolio](https://piet-de-leeuw.github.io/)
