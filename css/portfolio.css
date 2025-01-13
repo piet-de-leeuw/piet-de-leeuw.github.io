@@ -1,17 +1,14 @@
 /***** GENERAL STYLING *****/
 
-* /*effects all elemments*/
-{
+* {/*effects all elemments*/
     box-sizing: border-box; /*prevents overflow by padding and border*/
 }
 
-html
-{
+html {
     scroll-behavior: smooth;
 }
 
-body
-{
+body {
     margin: 0%; /* Ensures the site to be displayed al the way up to the edge */
     opacity: 1; /* this and transition, affect the page loading fade in effect*/
     transition: 10s opacity;
@@ -23,29 +20,38 @@ body
 }
 
 /* This makes a fade-in effect when the page is loded */
-body.fade-out
-{
+body.fade-out {
     opacity: .1;
 }
 
-h1
-{
+h1 {
     text-transform: uppercase;
     font-family: "trebuchet MS", Optima;
     text-align: center;
     color: #1a1a1a;
 }
 
-h1:hover
-{
+h2 {
+    font-family: "trebuchet MS", Optima;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+h4{
+    padding-left: 1vw;
+    font-family: "trebuchet MS", Optima;
+    color: #1a1a1a;
+    margin-bottom: 0;
+}
+
+h1:hover, h2:hover {
     filter: grayscale(5%);
     transform: scale(1.1);
     transition: transform 1s;
 }
 
-p
-{
-    font-family: Perpetua, Rockwell Exstra Bold;
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
     text-align: justify;
     letter-spacing: .1vw;
     font-size: 2.5vw;
@@ -53,31 +59,30 @@ p
     padding-right: 1vw;
 }
 
-p:hover
-{
+p:hover, h4:hover {
     transform: scale(1.01);
     transition: transform 1s;
 }
 
-q
-{
+q {
     font-style: italic;
 }
 
 /*Centers the Video_text, GitHub link and Footer text*/
-.center
-{
+.center {
     text-align: center;
 }
 
-.center:hover
-{
+.center:hover {
     transform: scale(1.1);
     transition: transform 2s;
 }
 
-img
-{
+.bold {
+    font-weight: bold;
+}
+
+img {
     filter: grayscale(65%);
     border-radius: 8px;
     max-width: 100%;
@@ -87,8 +92,7 @@ img
     margin: auto;
 }
 
-img:hover
-{
+img:hover {
     filter: grayscale(5%);
 }
 
@@ -96,8 +100,7 @@ img:hover
 
 /***** NAVBAR *****/
 /*Styles the Navigations bar*/
-.navbar
-{
+.navbar {
     overflow: hidden; /*hiddes content that overflowes beyoned its containers borders*/
     background-color: black;
     position: fixed;
@@ -109,15 +112,13 @@ img:hover
 }
 
 /*Moves the Navbar from left into the screen when the page is loaded*/
-@keyframes moveNavFromLeft
-{
+@keyframes moveNavFromLeft {
     from{left: -100vw;}
     to{left:  0vw;}
 }
 
 /*Styles the navigation buttons*/
-.navbar a
-{
+.navbar a {
     float: left; /*taxt floates on left of the navbar*/
     display: block;
     color: white;
@@ -130,8 +131,7 @@ img:hover
     
 }
 
-.navbar a:hover
-{
+.navbar a:hover {
     background-color: #f4f4f4;
     color: black;
     font-weight: bold;
@@ -139,15 +139,13 @@ img:hover
     transition: 0.5s ease-in;
 }
 
-.navbar a.active
-{
+.navbar a.active {
     background-color: darkgray;
 }
 
 /***** HOME *****/
 /*Video Background*/
-#typing_video
-{
+#typing_video {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -157,15 +155,13 @@ img:hover
 }
 
 /*Styling of the portfolio head in video_text*/
-.white-text 
-{
+.white-text  {
     color: #fff;
     padding-top: 10vh;
 }
 
 /*Text overlay over the background video*/
-.video-text
-{
+.video-text {
     background: rgba(0,0,0,0.5);
     color: white;
     width: 100%;
@@ -177,25 +173,21 @@ img:hover
 }
 
 /*Moves video_text from top into the screen*/
-@keyframes moveVideoText
-{
+@keyframes moveVideoText {
     from{top: -100vw;}
     to{top: 0vw;}
 }
 
 /***** Slideshow *****/
-#slideshow-background
-{
+#slideshow-background {
     background: rgba(126, 126, 126, 0.308);
 }
 
-.my-slide
-{
+.my-slide {
     display: none;
 }
 
-#slideshow-container
-{
+#slideshow-container {
     width: 39.5vw;
     height: auto;
     padding-top: 4%;
@@ -203,13 +195,11 @@ img:hover
     margin: auto;
 }
 
-#slideshow-container a
-{
+#slideshow-container a {
     text-decoration: none;
 }
 
-.slideshow-img
-{
+.slideshow-img {
     vertical-align: middle; /* centers images vertical in the middle of the slideshow-conrainer*/
     height: auto;
     box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
@@ -217,46 +207,40 @@ img:hover
     margin-top: 0px;
 }
 
-.portrait
-{
+.portrait {
     filter: grayscale(20%);
 }
 
-.portrait:hover
-{
+.portrait:hover {
     filter: grayscale(0%);
 }
 
-.previous, .next
-{
+.previous, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     padding: 2vw;
     color: darkgray;
-    font-size: 1.75vw;
+    font-size: 2vw;
     font-weight: bold;
     border-radius: 0 3px 3px 0;
     user-select: none;
     transition: 0.6s ease;
 }
 
-.next
-{
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.previous:hover, .next:hover
-{
+.previous:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
 /* Slideshow text */
-.text
-{
+.text {
     color: white;
     padding: 1vw;
     position: absolute;
@@ -272,15 +256,13 @@ img:hover
 }
 
 /* styles the word Contact so its you see you can click on it */
-.link
-{
+.link {
     text-decoration: underline;
     cursor: pointer;
 }
 
 /* Slideshow dots */
-.dot
-{
+.dot {
     cursor: pointer;
     height: 1vw;
     width: 1vw;
@@ -292,35 +274,30 @@ img:hover
     z-index: 1;
 }
 
-.active, .dot:hover
-{
+.active, .dot:hover {
     background-color: black;
 }
 
-.fade
-{
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade
-{
+@-webkit-keyframes fade {
     from {opacity: .4;}
     to {opacity: 1;}
 }
 
-@keyframes fade
-{
+@keyframes fade {
     from {opacity: .4;}
     to {opacity: 1;}
 }
 
 /***** STRUCTURE FOR ABOUT AND GITHUB*****/
 /*Styles the columned section*/
-.column_1
-{
+.column_1 {
     float: left;
     width: 50%;
     height: 400px;
@@ -328,8 +305,7 @@ img:hover
     background-color: #4d4d4d;
 }
 
-.column_2
-{
+.column_2 {
     float: left;
     width: 50%;
     height: 400px;
@@ -337,10 +313,24 @@ img:hover
     background-color: #f2f2f2;
 }
 
+.column_1_large {
+    float: left;
+    width: 50%;
+    height: 500px;
+    padding: 4.9%;
+    background-color: #4d4d4d;
+}
+
+.column_2_large {
+    float: left;
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
 
 /*Pushes the footer under the columns*/
-.row:after
-{
+.row:after {
     content: "";
     display: table;
     clear: both;
@@ -349,8 +339,7 @@ img:hover
 
 /***** CONTACT *****/
 
-.pop-up-button
-{
+.pop-up-button {
     position: fixed;
     bottom: 1.75vw;
     right: 1.75vw;
@@ -363,19 +352,16 @@ img:hover
     animation: movePopup 5s;
 }
 
-@-webkit-keyframes movePopup
-{
+@-webkit-keyframes movePopup {
     from{right: -40vw}
     to {right: 1.75vw}
 }
-@keyframes movePopup
-{
+@keyframes movePopup {
     from{right: -40vw}
     to {right: 1.75vw}
 }
 
-.form-popup
-{
+.form-popup {
     z-index: 8;
     display: none;
     position: fixed;
@@ -383,15 +369,13 @@ img:hover
     right: .5vw;
 }
 
-.form-container
-{
+.form-container {
     max-width: 49vw;
     padding: 1vw;
     background-color: white;
 }
 
-.form-container input[type=text]
-{
+.form-container input[type=text] {
     width: 100%;
     padding: .93vw;
     margin: .6vw 0 .6vw 0;
@@ -402,8 +386,7 @@ img:hover
     font-size: 1vw;
 }
 
-button
-{
+button {
     font-family: "Trebuchet MS", Optima;
     letter-spacing: .3vw;
     font-size: 1.5vw;
@@ -414,8 +397,7 @@ button
     height: auto;
 }
 
-button:hover, .form-container .btn:hover
-{
+button:hover, .form-container .btn:hover {
     color: white;
     background-color: black;
     transition-duration: 1s;
@@ -423,23 +405,20 @@ button:hover, .form-container .btn:hover
     border-color: silver;
 }
 
-.form-container .btn
-{
+.form-container .btn {
     background-color: white;
     color: black;
     border-color: black;
     margin-bottom: 1vh;
 }
 
-.form-container .cancel
-{
+.form-container .cancel {
     background-color: black;
     color: white;
     border: gray;
 }
 
-.form-container .cancel:hover
-{
+.form-container .cancel:hover {
     color: white;
     background-color: darkred;
     transition-duration: 1s;
@@ -447,8 +426,7 @@ button:hover, .form-container .btn:hover
     border-color: black;
 }
 
-/* form
-{
+/* form {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 12px;
@@ -457,14 +435,11 @@ button:hover, .form-container .btn:hover
 
 /***** FOOTER *****/
 
-.footer
-{
-
+.footer {
     background: white;
 }
 
-.footer p
-{
+.footer p {
     margin: 0px 0px;
     padding: 20px;
     font-size: 15px;
@@ -473,10 +448,9 @@ button:hover, .form-container .btn:hover
 
 /***** Media Query Section *****/
 /* Media rules for different screen sizes */
-@media screen and (max-width: 527px) 
-{
+@media screen and (max-width: 527px)  {
     /* Change paragraph font-size */
-    p 
+    p, h4, h2
     {
         font-size: 3.75vw;
     }
@@ -508,6 +482,7 @@ button:hover, .form-container .btn:hover
         height: 150px;
         margin-top: 20px;
     }
+
     .column_1
     {
         width: 100%;
@@ -517,6 +492,17 @@ button:hover, .form-container .btn:hover
     {
         width: 100%;
         height: 200px;
+    }
+
+    .column_1_large
+    {
+        width: 100%;
+        height: 300px;
+    }
+    .column_2_large
+    {
+        width: 100%;
+        height: 300px;
     }
 
     /* correct layout contact form. */
@@ -535,65 +521,57 @@ button:hover, .form-container .btn:hover
 }
 
 /* Differend sizes for paragraph for differend screen sizes*/
-@media screen and (min-width: 528px) and (max-width: 660px) 
-{
-    p 
+@media screen and (min-width: 528px) and (max-width: 660px)  {
+    p, h4, h2 
     {
         font-size: 3.5vw;
     }
 }
 
-@media screen and (min-width: 661px) and (max-width: 799px) 
-{
-    p 
+@media screen and (min-width: 661px) and (max-width: 799px)  {
+    p, h4, h2 
     {
         font-size: 2.75vw;
     }
 }
 
-@media screen and (min-width: 800px) and (max-width: 924px) 
-{
-    p 
+@media screen and (min-width: 800px) and (max-width: 924px)  {
+    p, h4, h2 
     {
         font-size: 2.5vw;
     }
 }
 
-@media screen and (min-width: 925px) and (max-width: 1050px) 
-{
-    p
+@media screen and (min-width: 925px) and (max-width: 1050px)  {
+    p, h4, h2 
     {
         font-size: 2.25vw;
     }
 }
 
-@media screen and (min-width: 1051px) and (max-width: 1310px) 
-{
-    p 
+@media screen and (min-width: 1051px) and (max-width: 1310px)  {
+    p, h4, h2 
     {
         font-size: 2vw;
     } 
 }
 
-@media screen and (min-width: 1311px) and (max-width: 1535px) 
-{
-    p 
+@media screen and (min-width: 1311px) and (max-width: 1535px)  {
+    p, h4, h2 
     {
         font-size: 1.75vw;
     }
 }
 
-@media screen and (min-width: 1536px) and (max-width: 2269px) 
-{
-    p 
+@media screen and (min-width: 1536px) and (max-width: 2269px)  {
+    p, h4, h2
     {
         font-size: 1.5vw;
     }
 }
 
-@media screen and (min-width: 2270px) 
-{
-    p 
+@media screen and (min-width: 2270px)  {
+    p, h4, h2 
     {
         font-size: 1.35vw;
     }
@@ -601,9 +579,8 @@ button:hover, .form-container .btn:hover
 
 /*Media rule for navbar links for different screen sizes*/
 /* Screens 1080px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 1080px)
-{
-    .Navbar a
+@media screen and (max-width: 1080px) {
+    .navbar a
     {
         width: 20%; /* This sets each navbar link to 1/5 of the navbar */
         font-size: 2.5vw;
@@ -611,8 +588,7 @@ button:hover, .form-container .btn:hover
 }
 
 /* Screens 576px and smaller will display navbar links equally distributed, navbar text bigger and more padding */
-@media screen and (max-width: 576px)
-{
+@media screen and (max-width: 576px) {
     .navbar a
     {
         width: 20%;
@@ -622,8 +598,7 @@ button:hover, .form-container .btn:hover
 }
 
 /* Media rules to enlarge the font of the white text for smaller screens */
-@media screen and (max-width: 1080px) 
-{
+@media screen and (max-width: 1080px)  {
     .quote
     {
         font-size: 3.5vw;
@@ -636,8 +611,7 @@ button:hover, .form-container .btn:hover
 }
 
 /* Media rules to increase the size of the columns for larger screens */
-@media screen and (min-width: 1725px) 
-{
+@media screen and (min-width: 1725px)  {
     .Column_1 
     {
         height: 550px;
@@ -650,8 +624,7 @@ button:hover, .form-container .btn:hover
 
 
 /*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
-@media screen and (min-width: 2000px) 
-{
+@media screen and (min-width: 2000px)  {
     h1
     {
         margin-top: 0;
@@ -659,8 +632,7 @@ button:hover, .form-container .btn:hover
 }
 
 /*No Video on small screen*/
-/* @media screen and (max-width: 576px)
-{
+/* @media screen and (max-width: 576px) {
     #typing_video
     {
         display: none;
