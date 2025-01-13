@@ -222,6 +222,7 @@ img:hover {
     width: auto;
     padding: 2vw;
     color: darkgray;
+    background-color: rgba(0, 0, 0, 0.1);
     font-size: 2vw;
     font-weight: bold;
     border-radius: 0 3px 3px 0;
@@ -300,7 +301,7 @@ img:hover {
 .column_1 {
     float: left;
     width: 50%;
-    height: 400px;
+    height: 420px;
     padding: 1.9%;
     background-color: #4d4d4d;
 }
@@ -308,7 +309,7 @@ img:hover {
 .column_2 {
     float: left;
     width: 50%;
-    height: 400px;
+    height: 420px;
     padding: 10px;
     background-color: #f2f2f2;
 }
@@ -476,7 +477,7 @@ button:hover, .form-container .btn:hover {
         font-size: 7vw;
     }
 
-    /* Change layout from coloms and the images inside */
+    /* Change layout from columns and the images inside */
     img
     {
         height: 150px;
