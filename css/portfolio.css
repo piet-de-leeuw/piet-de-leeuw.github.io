@@ -101,7 +101,10 @@ img:hover {
 /***** NAVBAR *****/
 /*Styles the Navigations bar*/
 .navbar {
-    overflow: hidden; /*hiddes content that overflowes beyoned its containers borders*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    overflow: visible;
     background-color: black;
     position: fixed;
     top: 0;
@@ -119,15 +122,12 @@ img:hover {
 
 /*Styles the navigation buttons*/
 .navbar a {
-    float: left; /*taxt floates on left of the navbar*/
-    display: block;
     color: white;
     text-decoration: none;
     padding: .75vw 1vw;
     font-family: Avant Garde, Helvetica;
     font-size: 1.5vw;
     text-align: center;
-    position: relative;
     
 }
 
@@ -141,6 +141,23 @@ img:hover {
 
 .navbar a.active {
     background-color: darkgray;
+}
+
+/* navbar dropdown */
+.dropdown {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-flex;
+    flex-direction: column;
+    overflow: visible;
 }
 
 /***** HOME *****/
